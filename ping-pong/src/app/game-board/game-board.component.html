@@ -1,0 +1,7 @@
+<div class="game-board">
+    <!-- Code for the player paddles -->
+    <app-paddle *ngFor="let player of players$ | async" [xPos]="player.position.x" [yPos]="player.position.y"></app-paddle>
+    <!-- The game ball -->
+    <app-ball [xPos]="(ball$ | async)?.position?.x" [yPos]="(ball$ | async)?.position?.y"></app-ball>
+    <!-- <p>{{(ball$ | async)?.position?.x}}</p> -->
+</div>
